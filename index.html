@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./all.min.css" />
+      </head>
+ 
+    <body>
+        <nav>
+            <h2 id="logo">Homero Teodoro</h2>
+            <ul class="navigation-items">
+            <li class="navigation-item"><a href="#about-me">About Me</a></li>
+            <li class="navigation-item"><a href="#education">Education</a></li>
+            <li class="navigation-item"><a href="#skills">Skills</a></li>
+            <li class="navigation-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    <main>
+        <section id="about-me">
+        <div class="about-me-container">
+            <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm Homero, father of Arthur, a 10 years old lovely boy. 
+                A husband of Lily, a wonderful woman that I love. 
+                We live in London, but we are from Brazil. For being very 
+                expansive and always looking for some adventures, 
+                we alredy lived in Italy and Portugal.
+            </p>
+            <p>
+                My school background is in Computer Science, and I had 
+                finished my degree in the year 2000. Since I finished my 
+                university, I had worked some time in IT area and when I 
+                was alway from my country, worked in other areas. I did some 
+                certifications and courses since then. Right now I am learning 
+                to code. This website is being in construction with the knowledge 
+                I have in HTML, CSS, Javascript, Git and Github. I hope you like it.
+            </p>
+            <p>
+                Fun fact! I've been programing for
+                <span id="time-container">0</span> seconds!
+              </p>
+            
+            </div>
+            <img
+            src="pictures/Homero.jpg"
+            alt="A photo of Homero Teodoro"
+            class="portrait"
+            />
+        </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <details class="education">
+            <summary class="education-title">
+                <h3>B.Sc. Computer Science</h3>
+            </summary>
+            <p class="education-description">
+                UNIPAR 02/1996 - 12/2000
+            </p>
+            </details>
+            <details class="education">
+            <summary class="education-title">
+                <h3>Formal Training & Certifications</h3>
+            </summary>
+                <ul>
+                    <li>AWS Certified Cloud Practitioner – 02/2023</li>
+                    <li>AWS – Re/Start AWS Digital Bootcamp 01/2023</li>
+                    <li>Microsoft Azure Fundamentals Certified – London 09/2022</li>
+                    <li>Web Development Basic – Udemy – 07/2022</li>
+                    <li>SAP - SAP HANA Introduction Course – Brazil 05/2019</li>
+                    <li>SAP Certified Technology Associate - System Administration (Oracle DB)/SAP</li>
+                    <li>AWS Certified Cloud Practitioner – 02/2023</li>
+                    <li>Netweaver 7.0 EhP2 – Brazil 06/2013</li>
+                </ul>          
+            </details>
+            <details class="education">
+            <summary class="education-title">
+                <h3>What am I studying right now?</h3>
+            </summary>
+            <p class="education-description">
+                Nowadays I am learning to code. I am doing a course in Codeacademy - Full Stack Engineer.
+            </p>
+            </details>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div id="skills-container">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-react"></i>
+            <i class="fab fa-aws"></i>
+            <i class="fab fa-git"></i>
+            <i class="fab fa-chrome"></i>
+            <i class="fas fa-terminal"></i>
+            <i class="fas fa-universal-access"></i>
+            <i class="fab fa-npm"></i>
+            <i class="fab fa-github"></i>
+            </div>
+        </section>
+        </main>
+
+        <footer>
+            <p class="text-center">Copyright @2023 | Designed by <a href="#">Homero Teodoro</a></p>
+        </footer>
+    </body>
+    <script>
+        const timeContainer = document.getElementById("time-container");
+        const BIRTH_DAY = "12-10-1815";
+        const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+        const intlNumberFormatter = new Intl.NumberFormat("en-US");
+    
+        setInterval(() => {
+          const now = new Date();
+          const difference = Math.floor(
+            (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+          );
+    
+          timeContainer.innerText = intlNumberFormatter.format(difference);
+        }, 1000);
+      </script>
+</html>
