@@ -74,6 +74,10 @@ nav {
   margin-right: var(--spacing-3);
 }
 
+.about-me-text-container {
+  line-height: 1.8em;
+}
+
 .education-image {
   width: 50%;
 }
