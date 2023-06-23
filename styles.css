@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Roboto&family=Satisfy&family=Source+Code+Pro&family=Space+Mono&family=Work+Sans:wght@400;500;800&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -19,10 +20,6 @@ body {
   --border-radius: 12px;
 
   --font-color: #323232;
-}
-
-.heart {
-  color: red;
 }
 
 h2 {
@@ -61,7 +58,7 @@ nav {
 }
 
 .portrait {
-  width: 300px;
+  width: 280px;
   border-radius: var(--border-radius);
   flex-shrink: 0;
 }
@@ -72,14 +69,7 @@ nav {
 
 .about-me-text-container {
   margin-right: var(--spacing-3);
-}
-
-.about-me-text-container {
   line-height: 1.8em;
-}
-
-.education-image {
-  width: 50%;
 }
 
 .education-title h3 {
@@ -133,8 +123,45 @@ a {
   margin-top: var(--spacing-1);
 }
 
+#positive {
+  background-color: #cccaca;
+  border-radius: var(--border-radius);
+  text-align: center;
+
+}
+
+#positive h3 {
+  font-family: 'Satisfy', cursive;
+  font-size: 2em;
+  color: white;
+}
+
 @media only screen and (max-width: 600px) {
   .about-me-container {
     flex-direction: column;
+  }
+
+  .about-me-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portrait {
+    width: 180px;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+    display: flex;
+    
+  }
+
+  .navigation-items {
+    display: none;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: var(--spacing-2) 0;
+    text-align: center;
   }
 }
